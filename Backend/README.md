@@ -54,8 +54,10 @@
     {
         "name": "string",
         "hydrationRate": "integer: 1(very bad)-5(very good)",
-        "walkingRate": "integer 1-5: linear interpolation of steps taken from 0 to 8k",
-        "health": "integer: 1(unhealthy) - 5(very healthy)",
+        "hungerRate": "integer: 1(very hungry)-5(not hungry)",
+        "sleepRate": "integer: 1(very sleepy)-5(not sleepy)",
+        "boredomRate": "integer 1(very bored)-5(satisfied)",
+        "health": "integer: 1(unhealthy) - 5(very healty)",
         "happyness": "integer: 1(unhappy) - 5(very happy)"
     }
     ```
@@ -68,7 +70,9 @@
     {
         "name": "string",
         "hydrationRate": "integer: 1(very bad)-5(very good)",
-        "walkingRate": "integer 1-5: linear interpolation of steps taken from 0 to 8k",
+        "hungerRate": "integer: 1(very hungry)-5(not hungry)",
+        "sleepRate": "integer: 1(very sleepy)-5(not sleepy)",
+        "boredomRate": "integer 1(very bored)-5(satisfied)",
         "health": "integer: 1(unhealthy) - 5(very healty)",
         "happyness": "integer: 1(unhappy) - 5(very happy)"
     }

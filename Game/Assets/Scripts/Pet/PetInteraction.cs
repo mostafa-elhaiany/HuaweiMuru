@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PetInteraction : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class PetInteraction : MonoBehaviour
     private float petDuration = 2.0f; // Adjust the duration of the petting
     private float petTimer = 0.0f;
     private bool isBeingPetted = false;
+    public static UnityEvent onPetting = new UnityEvent();
+
 
     private void Update()
     {
@@ -20,6 +23,7 @@ public class PetInteraction : MonoBehaviour
             if (hitInfo.collider && hitInfo.collider.gameObject == gameObject)
             {
                 Instantiate(heartParticles, transform.position, Quaternion.identity);
+                onPetting.Invoke();
             }
 
         }

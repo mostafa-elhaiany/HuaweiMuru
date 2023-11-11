@@ -25,6 +25,12 @@ public class PetController : MonoBehaviour
     private void Start()
     {
         ChangeState(PetState.Idle);
+        PetInteraction.onPetting.AddListener(hasPetted);
+    }
+
+    void hasPetted()
+    {
+        Debug.Log("Petting Detected");
     }
 
     private void Update()

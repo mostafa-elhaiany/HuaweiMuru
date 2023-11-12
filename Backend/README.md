@@ -1,11 +1,10 @@
 ## **User** Resource
 
-    ```json
-    {
-        "id": "UUID",
-        "username": "string",
-    }
-    ```
+```json
+{
+    "username": "string",
+}
+```
 
 - POST /users - registers a new user
 
@@ -50,17 +49,17 @@
 
 ## **Pet** Resource
 
-    ```json
-    {
-        "name": "string",
-        "hydrationRate": "integer: 1(very bad)-5(very good)",
-        "hungerRate": "integer: 1(very hungry)-5(not hungry)",
-        "sleepRate": "integer: 1(very sleepy)-5(not sleepy)",
-        "boredomRate": "integer 1(very bored)-5(satisfied)",
-        "health": "integer: 1(unhealthy) - 5(very healty)",
-        "happyness": "integer: 1(unhappy) - 5(very happy)"
-    }
-    ```
+```json
+{
+    "name": "string",
+    "hydrationRate": "integer: 1(very bad)-5(very good)",
+    "hungerRate": "integer: 1(very hungry)-5(not hungry)",
+    "sleepRate": "integer: 1(very sleepy)-5(not sleepy)",
+    "boredomRate": "integer 1(very bored)-5(satisfied)",
+    "health": "integer: 1(unhealthy) - 5(very healty)",
+    "happyness": "integer: 1(unhappy) - 5(very happy)"
+}
+```
 
 - GET /user/{id}/pet - get user's pet status
 

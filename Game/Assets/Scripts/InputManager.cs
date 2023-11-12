@@ -1,21 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class InputManager : MonoBehaviour
 {
+    PhotonView view;
     // Start is called before the first frame update
     void Start()
     {
-        
+        view = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (view.IsMine)
         {
-            FindObjectOfType<WanderScript>().wander();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                FindObjectOfType<WanderScript>().wander();
+            }
         }
+        
     }
 }

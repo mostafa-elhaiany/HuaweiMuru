@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class WanderScript : MonoBehaviour
 {
-    [SerializeField] Transform[] targetPoints;
+    [SerializeField] GameObject[] targetPoints;
     private Vector3 initialScale;
     Vector3 target;
 
     void Start()
     {
-        
+        targetPoints = GameObject.FindGameObjectsWithTag("POI");
+
         // Record the initial scale of the pet
         initialScale = transform.localScale;
-
+        int idx = Random.Range(0, targetPoints.Length);
+        target = targetPoints[idx].transform.position;
+        //transform.position = target;
         // Start wandering
         // Wander();
     }
@@ -33,7 +36,7 @@ public class WanderScript : MonoBehaviour
     {
         // Randomly select a position within the wander radius
         int idx = Random.Range(0, targetPoints.Length);
-        target = targetPoints[idx].position;
+        target = targetPoints[idx].transform.position;
 
 
         
